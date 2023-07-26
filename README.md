@@ -1,3 +1,3 @@
 # Приложение таймер
 
-ссылка
+https://timer-two-sable.vercel.app/
