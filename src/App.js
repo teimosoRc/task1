@@ -27,6 +27,7 @@ const App = () => {
     };
   }, [isRunning]);
 
+  //Отображение таймера
   const formatTime = (time) => {
     const hours = Math.floor(time / 3600);
     const minutes = Math.floor((time % 3600) / 60);
@@ -37,10 +38,12 @@ const App = () => {
       .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
   };
 
+  //Ввод данных с поля
   const handleInputChange = (event) => {
     setInputTime(event.target.value);
   };
 
+  //Форматирование полученого времени в секунды и запуск таймера
   const handleSetTime = () => {
     const timeArray = inputTime.split(":");
     const hours = parseInt(timeArray[0]) || 0;
@@ -52,6 +55,7 @@ const App = () => {
     setIsRunning(true);
   };
 
+  // Остановка таймер по кнопке
   const handleStop = () => {
     setIsRunning(false);
   };
